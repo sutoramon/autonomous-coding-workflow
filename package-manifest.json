@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "files": [
     {
       "path": ".github/workflows/validate.yml",
@@ -12,7 +12,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "c02200323bd28c98c43163ff1682c87cfa55f3fd70d1a296806b416bc373b327"
+      "sha256": "a6eaca29a3898f6efee4b4f2cb97eae8e9019e0392a6364a9896d78ee7065a39"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -24,7 +24,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "5cdcdf1a253283cb8232219379cc901987df13e2d6ed6e1203d7fa6fb893a766"
+      "sha256": "23b2bcf331c7796ef54d79594b63b2329f07d3e86f413923a34d8b0cf6bd9f8e"
     },
     {
       "path": "WORKFLOW.md",
@@ -32,7 +32,7 @@
     },
     {
       "path": "docs/CORE-RULES.md",
-      "sha256": "97d42dadc0ec844c1538dfbd24dae603c99b3e694c5513ca04bc247fd899d762"
+      "sha256": "72382d24214cc8c381d75eb64abe29a49bae67528c4f021f202820cdf4e25bff"
     },
     {
       "path": "docs/ENGINEERING-STANDARDS.md",
@@ -56,7 +56,7 @@
     },
     {
       "path": "docs/VERIFICATION.md",
-      "sha256": "3c83e313a6dd6d062a3c6c67b7b350c48c4d8fbdcaf4bf0194cab0f15817ace5"
+      "sha256": "55ae95f962e231b7a46ed098b9852ec1cef6564a3014a0b8253d1204a56b3569"
     },
     {
       "path": "procedures/01-onboarding.md",
@@ -104,7 +104,7 @@
     },
     {
       "path": "templates/project.json",
-      "sha256": "2471e0c4329aa058860018dacb9fcec2175cddbe97b2107fdd7fb62354611d65"
+      "sha256": "a9608599de8d5446aec8b8f60dc94808778555b50e3951952cc919292e03e7af"
     },
     {
       "path": "templates/quality-gates.json",
@@ -123,16 +123,20 @@
       "sha256": "49e1366f7b36713212995ea8de7825884d93558cb997bdb2a7450d332dc6be79"
     },
     {
+      "path": "tests/test_runner_extra.py",
+      "sha256": "473da330b60b936416cac0495b96f175b725e5c615d866c8d5e844fcd01e98f0"
+    },
+    {
       "path": "tools/acw.py",
-      "sha256": "06eb888120cc0daf23d7d0b9539b4a48e403421c64ee3815d90a9de115df6146"
+      "sha256": "36f26ffe68daaaea3a10e573e0929a2a0e2bcd2ea683f3949b1a83af29ff9dbb"
     },
     {
       "path": "tools/acw_core.py",
-      "sha256": "34ade65ee60322fae334c8c9e0b07bb229349ac3d243977015575fe1f0b19d9b"
+      "sha256": "5ecdcf944e3fc95f28e1adef94a2e79e8d19ebed748fe92ef130e94dd9891973"
     },
     {
       "path": "tools/acw_runner.py",
-      "sha256": "25f74ee7bfc97fd3984223d89ee48c17090017a2029702d01720aaf83d19df57"
+      "sha256": "a1427e6830c80779e22e80231fcc9697f9619176f3f6007ae90b3fda447121cc"
     }
   ]
 }

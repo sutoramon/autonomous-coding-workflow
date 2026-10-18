@@ -9,7 +9,7 @@ Read this short summary at session start. [WORKFLOW.md](../WORKFLOW.md) contains
 5. Implement coherent increments with meaningful regression tests, explicit contracts and bounded side effects.
 6. Execute the real project-defined checks. A failed, timed-out, absent or unavailable required check blocks completion.
 7. `critical` inherits `standard` and `light` gates. Do not bypass mandatory checks on a smaller diff.
-8. Bind evidence to committed source content, gate configuration and immutable hashed logs; keep test artifacts private.
+8. Bind evidence to committed source content, gate configuration and immutable hashed logs; terminate gate-owned process groups on exit and preserve interrupted evidence; keep test artifacts private.
 9. Review the full change, edge cases, security, data, architecture, test strength and documentation before completion.
 10. Mark `done` only with passed current evidence and source-bound self-review; task-record-only commits may follow verified code.
 11. On interruption, reconcile actual processes, Git/worktrees, source and evidence before resuming.

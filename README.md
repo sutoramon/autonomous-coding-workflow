@@ -15,7 +15,7 @@ ACW guides a coding agent through planning, implementation, testing, self-review
 
 ## Requirements
 
-Python 3.10+, Git 2.x, and the tools your project already needs. No pip dependencies. The core Markdown instructions work even without Python. A GitHub account, CI, or native skill registry is **not required**.
+Python 3.10+, Git 2.x, and a POSIX platform (Linux/macOS) for the CLI runner (`fcntl`, process groups); Windows is not supported natively. No pip dependencies. The core Markdown instructions work even without Python. A GitHub account, CI, or native skill registry is **not required**.
 
 ## Quick start
 

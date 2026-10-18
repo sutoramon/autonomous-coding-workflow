@@ -7,10 +7,10 @@ import json
 from pathlib import Path
 import sys
 
-from acw_core import (VERSION, PROFILES, STATUSES, EXCLUDED, timestamp, fail, load, digest,
-                      canonical, filehash, required_ids, validate_gates, repository_state,
-                      validate_project, validate_task, validate_evidence, package,
-                      write_manifest, init_project)
+from acw_core import (PROFILES, fail, load, validate_project, validate_task,
+                      validate_evidence, package, write_manifest, init_project)
+# Compatibility exports for existing direct Python API consumers.
+from acw_core import required_ids, validate_gates, repository_state
 from acw_runner import run_checks
 
 

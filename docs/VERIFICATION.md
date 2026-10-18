@@ -34,10 +34,12 @@ Structured evidence complements, not replaces, code inspection: a zero-test suit
 
 ## Safety and concurrency
 
-This is an explicit command runner, not a sandbox. Review check configuration before use; commands execute with local permissions. Only run tests against disposable or project-designated test data. Avoid parallel writers. An `fcntl.flock` lock guards concurrent CLI runs on the same host and project, and releases after a killed process. On timeout the runner kills the child process group (POSIX); it cannot guarantee termination of detached children. It does not coordinate unrelated agents or processes. Check evidence before retrying.
+This is an explicit command runner, not a sandbox. Review check configuration before use; commands execute with local permissions. Only run tests against disposable or project-designated test data. Avoid parallel writers. An `fcntl.flock` lock guards concurrent CLI runs on the same host and project, and releases after a killed process. On every gate exit (including success) and on timeout or Ctrl+C, the runner kills the isolated process group (POSIX). Detached processes that deliberately escape the process group are outside this guarantee. Interrupted runs retain partial evidence with `complete: false` and are never accepted by `verify`. It does not coordinate unrelated agents or processes. Check evidence before retrying.
 
 ## Profiles and GitHub boundaries
 
 Profile requirements are cumulative: `critical` includes every `standard` and `light` gate, and `standard` includes `light`. A required check must be assigned to at least its minimum profile.
 
 In `github` mode the CLI validates the local candidate and reports that **remote PR, CI, merge and deployment state require separate live verification**. It does not call `gh`, approve a PR, or certify a remote release.
+
+A stronger completed risk profile may satisfy a lower-risk task (`critical` evidence can satisfy a `light` task); the reverse is prohibited. The CLI currently requires a POSIX platform (Linux/macOS).

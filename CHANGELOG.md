@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.2 — 2026-10-18
+
+- Terminate isolated gate process groups after every exit, including successful shells with background descendants.
+- Preserve incomplete evidence and clean up gate processes on interruption or runtime errors.
+- Narrow placeholder detection so code syntax, component names and regular TODO references remain valid acceptance criteria.
+- Accept evidence from a stronger risk profile when validating lower-risk tasks.
+- Document POSIX-only CLI requirements and tidy imports and check selection.
+
 ## 1.0.1 — 2026-10-18
 
 - Fixed completed-task validation with explicit evidence and task-only commit handling.

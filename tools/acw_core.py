@@ -11,12 +11,12 @@ import shutil
 import subprocess
 from urllib.parse import unquote, urlsplit
 
-VERSION = "1.0.1"
+VERSION = "1.0.2"
 PROFILES = ("light", "standard", "critical")
 STATUSES = {"backlog", "in_progress", "in_review", "done", "cancelled"}
 EXCLUDED = {".git", ".acw", "__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache", ".tox"}
 TASK_PREFIX = b".acw/tasks/"
-PLACEHOLDER = re.compile(r"\b(?:todo|tbd|change_me|replace this|placeholder)\b|\{\{[^}]*\}\}|<[^>]+>", re.I)
+PLACEHOLDER = re.compile(r"(?:\{\{[^}]*\}\}|^\s*<[^<>]+>\s*$|^\s*(?:TODO|TBD|CHANGE_ME|PLACEHOLDER)\s*(?::|$)|^\s*Replace this\b)", re.I)
 
 
 def timestamp():
@@ -121,7 +121,7 @@ def validate_project(root):
     root = Path(root).resolve()
     config = load(root / ".acw/project.json")
     gates = load(root / ".acw/quality-gates.json")
-    if config.get("schema_version") != 1 or config.get("workflow_version") not in ("1.0.0", VERSION):
+    if config.get("schema_version") != 1 or config.get("workflow_version") not in ("1.0.0", "1.0.1", VERSION):
         fail("Unsupported project schema or workflow version")
     if config.get("mode") not in ("solo", "github"):
         fail("Mode must be solo or github")
@@ -181,8 +181,10 @@ def _ancestor(root, source_sha, current_sha):
 
 
 def validate_evidence(report, root, profile):
-    if not isinstance(report, dict) or report.get("schema_version") != 1 or report.get("profile") != profile:
+    if not isinstance(report, dict) or report.get("schema_version") != 1 or report.get("profile") not in PROFILES or profile not in PROFILES or PROFILES.index(report["profile"]) < PROFILES.index(profile):
         fail("Wrong evidence schema or profile")
+    if report.get("complete") is False:
+        fail("Incomplete or interrupted evidence cannot pass verification")
     root = Path(root).resolve()
     _, gates = validate_project(root)
     state = repository_state(root)
