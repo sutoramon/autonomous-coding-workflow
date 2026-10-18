@@ -2,7 +2,7 @@
 
 **A harness-independent, single-agent software development workflow with verifiable quality gates.**
 
-ACW helps one coding agent plan, implement, test, review its own work, recover after interruption, and release safely. It does not launch agents, require another reviewer, call an LLM API, or depend on an agent runtime. A skill-aware agent can use the four `SKILL.md` files; any agent with file access can follow the same Markdown instructions directly.
+ACW guides a coding agent through planning, implementation, testing, self-review, recovery, and release. Its core workflow is independent of agent runtimes and hosted services. A skill-aware agent can use the four `SKILL.md` files; any agent with file access can follow the same Markdown instructions directly.
 
 ## What you get
 
@@ -15,7 +15,7 @@ ACW helps one coding agent plan, implement, test, review its own work, recover a
 
 ## Requirements
 
-Python 3.10+, Git 2.x, and the tools your project already needs. No pip dependencies. The core Markdown instructions work even without Python. A GitHub account, CI, native skill registry, separate model, and second reviewer are **not required**.
+Python 3.10+, Git 2.x, and the tools your project already needs. No pip dependencies. The core Markdown instructions work even without Python. A GitHub account, CI, or native skill registry is **not required**.
 
 ## Quick start
 
@@ -48,7 +48,7 @@ See [workflow rules](WORKFLOW.md), [risk profiles](docs/RISK-PROFILES.md), [engi
 
 ## Scope and explicit non-goals
 
-ACW defines a **method** and executes configured project checks. It is not an orchestration daemon, auto-resume service, code-generation model, CI provider, compiler, reviewer-agent framework, secret scanner, or guarantee of flawless output. It never silently grants merge, deploy, delete, or production authority. It uses real, project-specific tools for actual verification.
+ACW defines a **method** and executes configured project checks. It is not an orchestration daemon, auto-resume service, code-generation model, CI provider, compiler, security scanner, or guarantee of flawless output. It never silently grants merge, deploy, delete, or production authority. It uses real, project-specific tools for actual verification.
 
 ## License and contribution
 

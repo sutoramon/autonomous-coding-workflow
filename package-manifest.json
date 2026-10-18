@@ -12,11 +12,11 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "8ea774906f8c2088b6b8e53840dbe40ecaec2494dbc8d221a99d68091f207957"
+      "sha256": "9c078e54c1b368a5186f954a84d0a11cb5e73da28fe3b24ea390a18bd9c50f57"
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "9005300a85df54f3f1b5b7bfe368efccd7a80823471fc1698009a80b5dd4a853"
+      "sha256": "e0c57b2b85b0373eebc01dd5fddde904532b5bff4676388acf1964f6304ae734"
     },
     {
       "path": "LICENSE",
@@ -24,23 +24,23 @@
     },
     {
       "path": "README.md",
-      "sha256": "ff670cef79b8159041209cd9ad7343e322fecb24b6c8f75f0cbe385a0cf019fc"
+      "sha256": "86f543a8b64dc37797ae5bf4e5883695307145839316762dacad2e9bd9dfd00d"
     },
     {
       "path": "WORKFLOW.md",
-      "sha256": "57b48906d3c10306aa1e584e8b4ac529a92610ad17b86cd295a23b0489f8e00e"
+      "sha256": "4bb68a388fe0b1a47f6061a6ffe2d2d923a13a5266d8a53406096b837abadadf"
     },
     {
       "path": "docs/ENGINEERING-STANDARDS.md",
-      "sha256": "a86c6955e1ec1312054b8c9e726acd80a0d1c3094276d9c96c8c83c753b72c0a"
+      "sha256": "495c7548e6628a936119d3c063d54cee31110cb1671b7d74487844cbf5925b0a"
     },
     {
       "path": "docs/EXAMPLE-TASK.md",
-      "sha256": "3720f12873cfb539941c9792000a6d94ddf44beb18b65ec067b486fd033c0225"
+      "sha256": "0fdd774dc8e88d018e3c395a596c0e2deee6e6b4288f27b2c7222d6b5ee5d541"
     },
     {
       "path": "docs/QUICKSTART.md",
-      "sha256": "56ed21c40a904dee6933ed36ea87cae60acec8bbe22bdb864d0f041553b6588c"
+      "sha256": "f9e31f32fc6c32e9b4e142afa447dad557e5802d3d8531a51549c7e6a32ab6c0"
     },
     {
       "path": "docs/RISK-PROFILES.md",
@@ -48,7 +48,7 @@
     },
     {
       "path": "docs/SECURITY.md",
-      "sha256": "69e173b51ad28f16d02471988bb46a71b6e56e4707e6d9c0c78d88d61235cb9d"
+      "sha256": "7f55b1be81368bc8e256ec7903245a0e544daf44835d0305c5a6176e9a560196"
     },
     {
       "path": "docs/VERIFICATION.md",
@@ -64,7 +64,7 @@
     },
     {
       "path": "procedures/03-self-review.md",
-      "sha256": "72140bda5b427339b53eba6a963869acfcbeaf9d285b2bb14a9012ae33e152d2"
+      "sha256": "2790c6d0570a125f359367f390a5a07bd74d62356983741ec4b2d61b63587b2a"
     },
     {
       "path": "procedures/04-release.md",
@@ -80,7 +80,7 @@
     },
     {
       "path": "skills/project-onboarding/SKILL.md",
-      "sha256": "5f46230aaacdf05add8506ec3323ae99303f8fdaecadd558ee98a0a9255f1ac4"
+      "sha256": "77206671799becf91e9b0bda834b2a8883fbe9ca5fe08581a231869033058a43"
     },
     {
       "path": "skills/release-closeout/SKILL.md",
@@ -88,15 +88,15 @@
     },
     {
       "path": "skills/self-review/SKILL.md",
-      "sha256": "7531dee0e0e6470e817a0bd6ae2993bd8f80b770383973c93924dc1a6385a1fe"
+      "sha256": "1fcbf6017fa8d791481adf5241a93e3841633ecbec73c05f6210e331575a4e0a"
     },
     {
       "path": "skills/task-execution/SKILL.md",
-      "sha256": "1439d582e233dfbac762685e59471616e6c9b50105f15e197019815f1402549f"
+      "sha256": "5a004958067280b77c50b99b1e58a8d34909e74f3708d19716218c102119d5e3"
     },
     {
       "path": "templates/AGENTS.md",
-      "sha256": "800fb4b28ecd737f97bb0c4a962623bf2df932d6f6b3a76064972e78854756ea"
+      "sha256": "90d5709e32e88d98038f51104446c4df29fdfacee6918ddf2d41d42ff75ef755"
     },
     {
       "path": "templates/project.json",

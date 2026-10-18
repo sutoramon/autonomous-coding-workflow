@@ -2,11 +2,11 @@
 
 Version: **1.0.0**. Applies to any coding agent with access to project files and tools. This document owns shared policy; the phase skills route work; procedures describe execution. **MUST** indicates a mandatory rule within the currently authorized scope.
 
-## 1. Authority, boundaries and one agent
+## 1. Authority and boundaries
 
-Follow platform and user instructions, repository instructions, and project authorization. This workflow cannot grant permissions. One coding agent owns implementation, self-review and any authorized release actions. **Never start a second agent to satisfy a review step.** Distinguish review independence from a fresh-context perspective: a fresh review by the same agent is still self-review.
+Follow platform and user instructions, repository instructions, and project authorization. This workflow cannot grant permissions. The executing agent owns implementation, verification, self-review, and authorized release actions.
 
-Default mode is `solo`. Optional `github` mode adds PR and actual CI/merge evidence. Neither mode assumes an external reviewer. Only the project owner grants merge/deploy authority. No automatic remote publishing.
+Default mode is `solo`. Optional `github` mode adds PR and actual CI/merge evidence. Only the project owner grants merge/deploy authority. No automatic remote publishing.
 
 The current project file `.acw/project.json` defines mode, repository instructions and authority. Its gate file `.acw/quality-gates.json` defines actual project commands. The current task record owns task state; Git proves source identity; process/CI logs prove checks; runtime inspection proves deployment. Do not create parallel authoritative status ledgers.
 
@@ -36,9 +36,9 @@ Do not treat low test counts, zero discovered tests or green aggregate coverage 
 
 Tests must use isolated data, fake/safe external targets, and no production side effects by default. Failures and flaky outcomes remain visible.
 
-## 5. Single-agent self-review
+## 5. Self-review
 
-Before completion the **same agent** reads acceptance criteria, full candidate diff, surrounding affected code, contracts, tests, logs and documentation. Review correctness, security, data integrity, concurrency, cancellation, cleanup, performance, maintainability, forbidden effects and outward publication data. Record findings, repairs and final SHA. For medium/high risk, prefer a fresh-context read of evidence without previous implementation justifications, when supported. This is a perspective reset **not** a second agent or independent review.
+Before completion the agent reads acceptance criteria, the full candidate diff, surrounding affected code, contracts, tests, logs, and documentation. Review correctness, security, data integrity, concurrency, cancellation, cleanup, performance, maintainability, forbidden effects and outward publication data. Record findings, repairs and final SHA. For medium/high risk, prefer a fresh-context read of evidence without previous implementation justifications, when supported. Fresh-context review helps reduce confirmation bias but does not replace required executable checks.
 
 No self-review may override a failed or absent mandatory executable gate. If a defect is repaired, rerun affected checks and update candidate identity. Audit the **whole project** at each milestone boundary, not just the latest diff.
 

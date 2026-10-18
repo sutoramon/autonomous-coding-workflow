@@ -18,8 +18,8 @@ Follow the Autonomous Coding Workflow located at <workflow-directory>.
 Read WORKFLOW.md, the relevant SKILL.md and procedure.
 Work in <application-repository>. Read .acw/project.json, the current task
 record, repository instructions and actual Git state before acting.
-Use one agent, evidence-backed self-review and required project quality gates.
-Never start another agent or assume deployment/merge authority.
+Complete evidence-backed self-review and required project quality gates.
+Do not assume deployment or merge authority.
 ```
 
 ## For an agent without native skills

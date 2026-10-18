@@ -1,6 +1,6 @@
 # Contributing
 
-Contributions should remain harness-independent, dependency-light and friendly to a single coding agent. Propose changes with acceptance criteria, minimal implementation, runnable tests and a self-review describing risks and evidence.
+Contributions should remain harness-independent, dependency-light, and compatible with different coding tools. Propose changes with acceptance criteria, minimal implementation, runnable tests and a self-review describing risks and evidence.
 
 Before a pull request:
 
@@ -11,4 +11,4 @@ python3 -B -m unittest discover -s tests -v
 
 Keep documentation links relative; avoid private filesystem paths, vendor-specific invocation assumptions, credentials, fake verification reports and redundant policy copies. If modifying a schema, update templates, validator tests and version documentation together.
 
-No second reviewer agent is required by this project. The contributor reviews its own changes; maintainers control merge permissions. Repo branch protection and workflows remain subject to owner configuration.
+Include self-review findings and relevant verification results in each pull request. Repository maintainers control merge permissions, branch protection, and workflow settings.

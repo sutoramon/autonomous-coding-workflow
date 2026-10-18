@@ -1,6 +1,6 @@
 # Example: fixing an API authorization bug
 
-**This is illustrative, not evidence for a real application.** One coding agent can follow this without native skill registration.
+**This is illustrative, not evidence for a real application.** This example works without native skill registration.
 
 1. Read [workflow](../WORKFLOW.md) and [task skill](../skills/task-execution/SKILL.md).
 2. Inspect current Git and active jobs; do not start while another writer is active.

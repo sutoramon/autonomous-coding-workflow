@@ -1,6 +1,6 @@
 ---
 name: self-review
-description: Perform evidence-backed code review and full-milestone audit by the same agent, without pretending to be an independent reviewer.
+description: Review candidate changes and complete whole-project milestone audits using requirements, source diffs, tests, and verification evidence.
 ---
 # Self Review
 
@@ -11,9 +11,9 @@ Read [core policy](../../WORKFLOW.md), [review procedure](../../procedures/03-se
 - **Milestone:** Inspect the *whole project*, not just a diff, and validate feature interactions, documentation and quality gates.
 
 ## Review contract
-The sole coding agent owns this review. A fresh context (when possible) means rereading requirements, diff and evidence before its own earlier justifications; it is **not independent review**. Findings must name severity, location, observed risk, desired repair and verification. Check security and denied operations, data lifecycle, concurrency/restart, failure handling, test strength, accessibility where applicable, code cohesion, docs and outward publication hygiene.
+Read requirements, the candidate diff, and verification evidence before revisiting implementation rationale. A fresh context can help reduce confirmation bias. Findings must name severity, location, observed risk, desired repair, and verification. Check security and denied operations, data lifecycle, concurrency/restart, failure handling, test strength, accessibility where applicable, code cohesion, docs and outward publication hygiene.
 
-Tests and static analyzers produce objective evidence but never constitute a second reviewer. Do not override failing, missing or stale required checks; do not self-approve a requested exception. Following fixes, rerun affected checks and revalidate SHA and evidence.
+Tests and static analyzers provide evidence to inspect; they do not replace a review of the relevant code and behavior. Do not override failing, missing or stale required checks; do not self-approve a requested exception. Following fixes, rerun affected checks and revalidate SHA and evidence.
 
 ## Exit
 Current source-bound findings and an explicit `passed`, `changes_requested` or `blocked` verdict. Pass only when acceptance and applicable mandatory gates hold.

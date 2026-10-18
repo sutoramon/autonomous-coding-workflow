@@ -7,4 +7,4 @@
 - Risk-adaptive light/standard/critical profiles.
 - Recovery guidance, SHA/dirty-tree-bound executable quality-gate evidence and whole-milestone audits.
 - Standard-library Python command-line validator/runner, fixtures and CI example.
-- No decision-model provider, second reviewer agent, runtime installer or automatic deployment.
+- No hosted-model integration, orchestration service, or automatic deployment.

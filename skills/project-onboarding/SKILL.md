@@ -4,7 +4,7 @@ description: Start or adopt a software project using the autonomous single-agent
 ---
 # Project Onboarding
 
-Read [core policy](../../WORKFLOW.md), [risk profiles](../../docs/RISK-PROFILES.md) and [onboarding procedure](../../procedures/01-onboarding.md). This skill routes one coding agent, not a second agent.
+Read [core policy](../../WORKFLOW.md), [risk profiles](../../docs/RISK-PROFILES.md) and [onboarding procedure](../../procedures/01-onboarding.md). Follow the procedure appropriate to the project stage.
 
 ## Use when
 A new application is proposed, requirements or architecture materially change, or an existing project explicitly adopts ACW. Do not repeat onboarding before an ordinary bug fix.

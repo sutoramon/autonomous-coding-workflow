@@ -4,7 +4,7 @@ These are review standards, **not evidence by themselves**. The workflow favors 
 
 ## Qualitative criteria
 
-| Dimension | Reviewer must examine |
+| Dimension | Review must examine |
 | --- | --- |
 | Correctness | Requirements, invalid states, invariants, failure propagation, observable effects |
 | Cohesion | One meaningful reason for a module to change, predictable call sites |
