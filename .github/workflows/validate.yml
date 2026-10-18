@@ -1,0 +1,18 @@
+name: Workflow package validation
+on:
+  push:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Package validation
+        run: python3 -B tools/acw.py package .
+      - name: Unit tests
+        run: python3 -B -m unittest discover -s tests -v

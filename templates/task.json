@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "TASK-EXAMPLE",
+  "title": "Replace with an accepted work item",
+  "status": "backlog",
+  "risk": "standard",
+  "critical_triggers": [],
+  "acceptance": [
+    "Replace this with objectively observable acceptance behavior"
+  ],
+  "next_action": "Read the task, inspect actual repository state, then plan.",
+  "blockers": [],
+  "source_sha": null,
+  "self_review": {
+    "verdict": "not_run",
+    "source_sha": null,
+    "findings": []
+  }
+}
