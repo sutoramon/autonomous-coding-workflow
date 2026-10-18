@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "workflow_version": "1.0.0",
+  "workflow_version": "1.0.1",
   "project": "CHANGE_ME",
   "mode": "solo",
   "repo_instructions": "AGENTS.md",

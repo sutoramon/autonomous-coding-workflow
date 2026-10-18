@@ -56,7 +56,7 @@ class WorkflowTests(unittest.TestCase):
     def test_missing_required_profile_fails(self):
         obj=acw.load(self.root/".acw/quality-gates.json")
         obj["checks"][0]["required_for"]=["standard"]
-        with self.assertRaisesRegex(ValueError,"No mandatory gate"):
+        with self.assertRaisesRegex(ValueError,"No real mandatory gate"):
             acw.validate_gates(obj)
 
     def test_missing_done_evidence_fails(self):
@@ -75,7 +75,7 @@ class WorkflowTests(unittest.TestCase):
         out=self.root/".acw/evidence"/"first.json"
         acw.run_checks(self.root,"standard",out)
         (self.root/"README.md").write_text("# Changed\n")
-        with self.assertRaisesRegex(ValueError,"clean repository"):
+        with self.assertRaisesRegex(ValueError,"clean application source"):
             acw.validate_evidence(acw.load(out),self.root,"standard")
 
     def test_failed_gate_cannot_pass(self):
@@ -108,9 +108,15 @@ class WorkflowTests(unittest.TestCase):
 
     def test_lock_blocks_parallel_cli(self):
         p=self.root/".acw/check-run.lock"
-        p.write_text("other PID")
-        with self.assertRaisesRegex(ValueError,"Another ACW"):
-            acw.run_checks(self.root,"light",self.root/".acw/evidence/checks.json")
+        import fcntl
+        fd = p.open("w")
+        try:
+            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            with self.assertRaisesRegex(ValueError,"Another ACW"):
+                acw.run_checks(self.root,"light",self.root/".acw/evidence/checks.json")
+        finally:
+            fcntl.flock(fd, fcntl.LOCK_UN)
+            fd.close()
         self.assertTrue(p.exists())
 
     def test_existing_project_config_not_overwritten(self):

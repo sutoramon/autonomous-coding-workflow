@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1 — 2026-10-18
+
+- Fixed completed-task validation with explicit evidence and task-only commit handling.
+- Added process-group timeout termination, streaming private run logs and log digest verification.
+- Added per-run log isolation, robust flock locks, cumulative risk profiles, manifest regeneration, stronger task checks and CLI regressions.
+- Clarified GitHub validation scope and added concise session core rules.
+
 ## 1.0.0 — 2026-10-18
 
 - First public-ready, single-agent, harness-independent workflow.

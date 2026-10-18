@@ -12,6 +12,6 @@ Select a task profile from the actual diff, intended behavior and trust boundari
 
 The CLI validates that a task's profile is not less than an explicitly declared `critical_triggers` signal and ensures every required check assigned to that profile exists and passed. It cannot infer all security risks from code, so both checklist inspection and executable checks are necessary.
 
-Profiles determine **additional** checks, not exceptions. If an existing project mandates a scan on all changes, it stays mandatory in `light`. Optional checks may be scheduled for releases, but mandatory checks never become `not_applicable` without a scoped, recorded reason and owner authorization.
+Profiles are cumulative: a `critical` run includes `standard` and `light` gates, and a `standard` run includes `light` gates. Specify each check at its minimum required level. Profiles determine **additional** checks, not exceptions. If an existing project mandates a scan on all changes, it stays mandatory in `light`. Optional checks may be scheduled for releases, but mandatory checks never become `not_applicable` without a scoped, recorded reason and owner authorization.
 
 Avoid unnecessary expense: run focused tests during increments, full applicable checks at candidate/milestone closure, and long-running stress/mutation/restore checks when relevant and safe. No universal test-count or coverage threshold.

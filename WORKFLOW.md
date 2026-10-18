@@ -1,6 +1,8 @@
 # Autonomous Coding Workflow — Normative Rules
 
-Version: **1.0.0**. Applies to any coding agent with access to project files and tools. This document owns shared policy; the phase skills route work; procedures describe execution. **MUST** indicates a mandatory rule within the currently authorized scope.
+Version: **1.0.1**. Applies to any coding agent with access to project files and tools. This document owns shared policy; the phase skills route work; procedures describe execution. **MUST** indicates a mandatory rule within the currently authorized scope.
+
+See [Core Rules](docs/CORE-RULES.md) for a short session-start summary. This document remains the normative policy.
 
 ## 1. Authority and boundaries
 
@@ -8,11 +10,11 @@ Follow platform and user instructions, repository instructions, and project auth
 
 Default mode is `solo`. Optional `github` mode adds PR and actual CI/merge evidence. Only the project owner grants merge/deploy authority. No automatic remote publishing.
 
-The current project file `.acw/project.json` defines mode, repository instructions and authority. Its gate file `.acw/quality-gates.json` defines actual project commands. The current task record owns task state; Git proves source identity; process/CI logs prove checks; runtime inspection proves deployment. Do not create parallel authoritative status ledgers.
+The current project file `.acw/project.json` defines mode, repository instructions and authority. Its gate file `.acw/quality-gates.json` defines actual project commands. The current task record owns task state; Git proves source identity (task-only commits do not invalidate source evidence); process/CI logs prove checks; runtime inspection proves deployment. Do not create parallel authoritative status ledgers.
 
 ## 2. First read and risk classification
 
-At session start or after interruption read: applicable repository instructions; project configuration; the current task record; latest Git status/log; relevant architecture, code and tests. Select the first incomplete phase from actual evidence, not the last chat message.
+At session start or after interruption read [core rules](docs/CORE-RULES.md), applicable repository instructions; project configuration; the current task record; latest Git status/log; relevant architecture, code and tests. Select the first incomplete phase from actual evidence, not the last chat message.
 
 Determine risk profile using [risk rules](docs/RISK-PROFILES.md). Deterministic critical triggers (e.g. credentials, permissions, destructive migrations, production state, money or irreversible effects) set a **minimum** of `critical`. Unknown risk is `standard` until assessed; if a critical trigger cannot be ruled out, treat it as critical. An agent may escalate but may not downgrade a trigger.
 

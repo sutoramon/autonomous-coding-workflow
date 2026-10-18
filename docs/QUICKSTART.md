@@ -9,7 +9,7 @@
 5. Edit `.acw/quality-gates.json`: replace the demonstration commands with **real stack-specific** commands; identify which checks are required by each risk profile. Keep production mutation out of tests.
 6. Run `python3 -B tools/acw.py project /path/to/app`. Start a task from `.acw/tasks/TASK-EXAMPLE.json`, rename it and fill acceptance conditions.
 7. Tell the coding agent to follow [WORKFLOW](../WORKFLOW.md), read the project state and activate [task-execution](../skills/task-execution/SKILL.md).
-8. Before closing the task, run the configured gates against a known candidate and validate the task.
+8. Before closing the task, run the configured gates against a clean committed candidate, update self-review and task source SHA, and validate the completed task with `--evidence`. Task-record-only commits do not invalidate application evidence.
 
 Sample instructions to an agent (substitute actual repository paths):
 
@@ -33,6 +33,8 @@ python3 -B /path/to/acw/tools/acw.py project /path/to/app
 python3 -B /path/to/acw/tools/acw.py task /path/to/app/.acw/tasks/TASK-EXAMPLE.json --project /path/to/app
 # After acceptance and appropriate isolated test setup:
 python3 -B /path/to/acw/tools/acw.py run /path/to/app --profile standard --output /path/to/app/.acw/evidence/checks.json
+# Once self-review is passed and task status is done:
+python3 -B /path/to/acw/tools/acw.py task /path/to/app/.acw/tasks/TASK-EXAMPLE.json --project /path/to/app --evidence /path/to/app/.acw/evidence/checks.json
 ```
 
 The `run` command executes **only** commands explicitly defined by the user in the project's gate file. It does not select or install tools. A successful `run` alone does not complete a task: examine actual assertions, current SHA, candidate cleanliness and self-review.

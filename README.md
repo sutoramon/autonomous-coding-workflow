@@ -11,7 +11,7 @@ ACW guides a coding agent through planning, implementation, testing, self-review
 - Evidence-bound checks and truthful task state. A failed, missing, skipped, stale, or timed-out required check is never a pass.
 - Recovery from Git plus one task record, without relying on chat history.
 - Standard-library Python CLI for initialization, validation, and execution of project-defined checks.
-- An optional GitHub Actions example; local and GitHub operation share the same rules.
+- An optional GitHub Actions example; local and GitHub operation share the same rules. GitHub PR/merge status is checked manually or through forge tooling, not by this CLI.
 
 ## Requirements
 
@@ -31,7 +31,7 @@ python3 -B tools/acw.py init /path/to/your-app
 python3 -B tools/acw.py project /path/to/your-app
 ```
 
-Start with [the full quick-start guide](docs/QUICKSTART.md). Your agent should read [WORKFLOW.md](WORKFLOW.md) once per new context, then the phase skill and its linked procedure. If native skills are unavailable, point the agent directly at the files. Native registration is optional.
+For concise agent startup, read [Core Rules](docs/CORE-RULES.md) first and load detailed procedures when needed. Start with [the full quick-start guide](docs/QUICKSTART.md). Your agent can read [Core Rules](docs/CORE-RULES.md) at startup, then the matching skill and linked procedure; consult [WORKFLOW.md](WORKFLOW.md) for normative details. If native skills are unavailable, point the agent directly at the files. Native registration is optional.
 
 ## Modes
 
